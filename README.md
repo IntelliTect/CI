@@ -1,2 +1,0 @@
-# CI
-Circuit Imaging Comparison

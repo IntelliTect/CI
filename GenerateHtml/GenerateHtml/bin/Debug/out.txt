@@ -1,0 +1,410 @@
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv = "Content-Type" content="text / html; charset = UTF-8" />
+                   <title> Product Comparison</title>
+                      <link href = 'https://fonts.googleapis.com/css?family=Lato:400,700' rel = 'stylesheet' type = 'text/css' >
+                      <link rel="stylesheet" href="css/normalize.min.css" >
+                      <link rel="stylesheet" href="css/animate.min.css" >
+                      <link rel="stylesheet" href="css/comparison.css" >
+</head>
+<body>
+    <a id="compare" href="#animatedModal" disabled class="compare-products">Compare Products</a>
+	<div class="container">
+<div class="product" data-id="1" data-title="Falcon" 
+data-model="Single Vacuum Table" 
+data-vendor="Circuit Imaging" 
+data-technology="Laser Diode" 
+data-wavelength="405 nm" 
+data-depth="ñ400æ" 
+data-power="100W+" 
+data-film="610X460mm: 240" 
+data-soldermask="610X460mm: 240" 
+data-speed="" 
+data-edge="" 
+data-positional="5æm" 
+data-registration="25æm" 
+data-line="20æm/20æm" 
+data-line2=""
+data-df="?" 
+data-hole="?" 
+data-hole2="" 
+data-sro="" 
+data-sr="" 
+data-address="" 
+data-min="305mm X 305mm" 
+data-max="610mm X 813mm" 
+data-panel="" 
+data-handling="" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="10 years" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="N/A" 
+data-panel2="Yes" 
+data-non-linear="Yes" 
+data-url="<a href=''>Click Here</a>"
+data-notes=""
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">Falcon</h3>
+<p class="description">Circuit Imaging</p>
+</div>
+
+<div class="product" data-id="2" data-title="Nuvogo 800/1000" 
+data-model="Standard/Fine" 
+data-vendor="Orbotech" 
+data-technology="Laser" 
+data-wavelength="" 
+data-depth="ñ300æ" 
+data-power="" 
+data-film="150" 
+data-soldermask="" 
+data-speed="" 
+data-edge="" 
+data-positional="" 
+data-registration="20æm" 
+data-line="18æm" 
+data-line2='<img src="products/nuvogo_line.png" width="100" height="50"/>'
+data-df="" 
+data-hole="" 
+data-hole2="" 
+data-sro="75æm" 
+data-sr="" 
+data-address="" 
+data-min="" 
+data-max="" 
+data-panel="" 
+data-handling="" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="2-3 years" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="Yes" 
+data-non-linear="Yes" 
+data-url="<a href='http://www.orbotech.com/imgs/uploads/PCB_Brochures_PDF/nuvogo1000_for%20web.pdfhttp://www.orbotech.com/imgs/uploads/PCB_Brochures_PDF/Nuvogo%20800%20brochure.pdf'>Click Here</a>"
+data-notes="1000 is designed for solder mask"
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">Nuvogo 800/1000</h3>
+<p class="description">Orbotech</p>
+</div>
+
+<div class="product" data-id="3" data-title="SpeedLight 2D" 
+data-model="Integrated (see notes) or Stand alone" 
+data-vendor="Manz (formerly KLEO)" 
+data-technology="Laser diodes: 288 beams;ÿ405 nm9 modules, 32 laser diodes per module" 
+data-wavelength="405nm" 
+data-depth="ñ300æ" 
+data-power="" 
+data-film="Image Size Unknown: 360" 
+data-soldermask="" 
+data-speed="" 
+data-edge="2 æm" 
+data-positional="2 æm" 
+data-registration="20æm" 
+data-line="15 æm" 
+data-line2='<img src="products/ledia_line.png" width="100" height="50"/>'
+data-df="" 
+data-hole="" 
+data-hole2="" 
+data-sro="" 
+data-sr="" 
+data-address="" 
+data-min="" 
+data-max="660 mm width x 650 mm length (extendable)" 
+data-panel="0.05 mm to 8 mm" 
+data-handling="" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="" 
+data-non-linear="" 
+data-url="<a href='SpeedLight Web PageSpeedLight 2D Brochure (General)'>Click Here</a>"
+data-notes="Their integrated solution includes Loading,ÿPre-cleaning,ÿFirst buffer,ÿDry film laminator (third-party product),ÿSecond buffer,ÿLaser direct imaging,ÿThird buffer,ÿMylar peeler (third-party product),ÿDeveloper,ÿUnloading."
+data-video="<a href='https://www.youtube.com/watch?v=AC9kSARQOWo'>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">SpeedLight 2D</h3>
+<p class="description">Manz (formerly KLEO)</p>
+</div>
+
+<div class="product" data-id="4" data-title="Ledia 6F" 
+data-model="Automatic single-side/Automatic double-sided/ManualStandard/FineEspecially for Soldermask5 or 6 heads" 
+data-vendor="Screen" 
+data-technology="DMD with UV-LED 5-6 Heads" 
+data-wavelength="365nm, 385nm, 405nm" 
+data-depth="" 
+data-power="" 
+data-film="510X405mm: 187 (Standard)" 
+data-soldermask="510X405mm: 71 (Standard)" 
+data-speed="" 
+data-edge="" 
+data-positional="Fine: 7 micron" 
+data-registration="" 
+data-line="Fine: 12/12 æm" 
+data-line2='<img src="products/inprex_line.png" width="100" height="50"/>'
+data-df="Fine: 20æm" 
+data-hole="Fine: 40æm" 
+data-hole2="" 
+data-sro="" 
+data-sr="Fine: 20 micron" 
+data-address="1 micron" 
+data-min="" 
+data-max="512X661 mm(Optional: 610X661 mm)Large: 612X813mm" 
+data-panel="" 
+data-handling="Manual or Automatic" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="2-3 years" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="" 
+data-non-linear="Yes" 
+data-url="<a href='http://www.screen.co.jp/eng/pcb/products/ledia/index.html'>Click Here</a>"
+data-notes=""
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">Ledia 6F</h3>
+<p class="description">Screen</p>
+</div>
+
+<div class="product" data-id="5" data-title="INPREX" 
+data-model="E Fine/PKG Standard/Stabi Fine/Large Panel" 
+data-vendor="Adtec" 
+data-technology="DMD with UV-LED leveraging Fugifilm's laser unit and lens design." 
+data-wavelength="Standard: 405nmSolder Resist: 365nm&405nm" 
+data-depth="" 
+data-power="Standard: 30-40WLarge Panel: 34-45WHDI Entry: 20WStabi Fast: 40-50WSolder Resist: 80W (MAX)" 
+data-film="" 
+data-soldermask="" 
+data-speed="" 
+data-edge="" 
+data-positional="Standard: 7.5æmE Fine Prologue: 5æmPKG Standard: 7æmLarge Panel: 10æm" 
+data-registration="" 
+data-line="E Fine Prologue: 6/6æmPKG Standard: 8/8æmStabi Fine: 12/12æmLarge Panel: 15/15æmHDI Entry: 15/15æmHDI Standard: 15/15æmStabi Fast: 15/15æm" 
+data-line2=""
+data-df="" 
+data-hole="100æm" 
+data-hole2="" 
+data-sro="50æm" 
+data-sr="" 
+data-address="" 
+data-min="Standard: 334X334mmLarge Panel: 483X381mm" 
+data-max="E Fine Prologue: 546X622mmPKG Standard:ÿ546X622mmStandard 551X640mmLarge Panel: 635X838mm" 
+data-panel="" 
+data-handling="Manual or Automatic, Single or Double Sided" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="2-3 years" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="Yes" 
+data-autofocus="Yes" 
+data-panel2="" 
+data-non-linear="Yes" 
+data-url="<a href='Adtec DI LineupIS-4000hÿ(for Soldermask)IP-4000h'>Click Here</a>"
+data-notes=""
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">INPREX</h3>
+<p class="description">Adtec</p>
+</div>
+
+<div class="product" data-id="6" data-title="Schmoll" 
+data-model="" 
+data-vendor="" 
+data-technology="" 
+data-wavelength="" 
+data-depth="" 
+data-power="" 
+data-film="" 
+data-soldermask="" 
+data-speed="" 
+data-edge="" 
+data-positional="" 
+data-registration="" 
+data-line="" 
+data-line2=""
+data-df="" 
+data-hole="" 
+data-hole2="" 
+data-sro="" 
+data-sr="" 
+data-address="" 
+data-min="" 
+data-max="" 
+data-panel="" 
+data-handling="" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="" 
+data-non-linear="" 
+data-url="<a href=''>Click Here</a>"
+data-notes="Schmoll Maschinen, the well-known suppli-er of mechanical and laser drilling machines, is now also offering a DDI (digital direct imaging) system, ideal for prototyping innerlayer, out-erlayer, and soldermask images. It is based on semiconductor laser diodes and large (wide) op-tics. The imager is equipped with two to eight diode lasers and can handle a maximum panel size of 610 x 535 mm. Schmoll also offers MDI (micromirror digital imaging) systems. The sys-tems are available as a single-table unit or with a double stage for higher throughput. The units use high-power LEDs and DMDr with multiple waverlengths from 365 to 405 nm."
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">Schmoll</h3>
+<p class="description"></p>
+</div>
+
+<div class="product" data-id="7" data-title="First EIE SA" 
+data-model="" 
+data-vendor="" 
+data-technology="" 
+data-wavelength="" 
+data-depth="" 
+data-power="" 
+data-film="" 
+data-soldermask="" 
+data-speed="" 
+data-edge="" 
+data-positional="" 
+data-registration="" 
+data-line="" 
+data-line2=""
+data-df="" 
+data-hole="" 
+data-hole2="" 
+data-sro="" 
+data-sr="" 
+data-address="" 
+data-min="" 
+data-max="610mm X 660mm" 
+data-panel="" 
+data-handling="" 
+data-machine="" 
+data-models="" 
+data-double="" 
+data-expected="" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="" 
+data-non-linear="" 
+data-url="<a href=''>Click Here</a>"
+data-notes=""
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">First EIE SA</h3>
+<p class="description"></p>
+</div>
+
+<div class="product" data-id="8" data-title="Aladdin" 
+data-model="Single Side, Double Side, PSR, Roll to Roll" 
+data-vendor="Ajuhitek" 
+data-technology="UV Laser Diode" 
+data-wavelength="405nm" 
+data-depth="" 
+data-power="2.5kWhUp to 100mj/?" 
+data-film="Standard Single Side: 100-180 sides/hourFine Single Side: 55-100 sides/hour" 
+data-soldermask="" 
+data-speed="" 
+data-edge="Standard: 40æm-50æmFine: 20æm-25æm" 
+data-positional="20æm" 
+data-registration="20æm" 
+data-line="Standard: 40æm - 50æmPSR: 50æmFine: 20æm - 25æm" 
+data-line2=""
+data-df="" 
+data-hole="" 
+data-hole2="" 
+data-sro="" 
+data-sr="" 
+data-address="" 
+data-min="" 
+data-max="680mm x 620mm" 
+data-panel="" 
+data-handling="Manual or Automatic, Single or Double Sided" 
+data-machine="Single Sided: 1,740mm(W) x 2,640mm(D) x 1,763mm(H)Double Sided: 2,600mm(W) x 2,140mm(D) x 2,100mm(H)PSR: 1,510mm(W) x 2,540mm(D) x 1,968mm(H)" 
+data-models="" 
+data-double="" 
+data-expected="" 
+data-warranty="" 
+data-warranty2="" 
+data-mechanical="" 
+data-autofocus="" 
+data-panel2="" 
+data-non-linear="" 
+data-url="<a href='Aladin LDIÿ(general)Double Side LDISingle Side LDIPSR LDIRoll to Roll LDI'>Click Here</a>"
+data-notes=""
+data-video="<a href=''>Click Here</a>"
+>
+<button><div>+</div></button>
+<img src = "products/1.png" class="product-image" />
+<h3 class="text-center">Aladdin</h3>
+<p class="description">Ajuhitek</p>
+</div>
+
+<div id= "animatedModal">
+					<div id = "btn-close-modal" class="close-animatedModal">
+						CLOSE
+                    </div>
+					<div class="modal-content">
+						<div class="modal-inner">
+							<div class="no-products">Select some products to compare first</div>
+							<div class="modal-products"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+</body>
+<script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type = "text/javascript" src="js/jquery.comparison.js"></script>
+<script type = "text/javascript" src="js/animatedModal.js"></script>
+<script>
+	$("#compare").animatedModal({
+
+		animatedIn: 'lightSpeedIn',
+		animatedOut: 'bounceOutDown',
+		color: '#3498db',
+
+	});
+
+	$(document).ready(function ()
+    {
+
+		$('.product').compare({
+            compareButton: '.compare-products'
+
+        });
+
+
+    });
+</script>
+<!-- Tutorial JS END -->
+</html>
