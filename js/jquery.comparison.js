@@ -37,8 +37,8 @@
 						'</span></li><li><span>Soldermask Sides/hour:<br/>' + $(product).data('soldermask') + '</span></li>' +
 						'</span></li><li><span>Speed Details:<br/>' + $(product).data('speed') + '</span></li>' +
 						'</span></li><li><span>Edge Roughness:<br/>' + $(product).data('edge') + '</span></li>' +
-						'</span></li><li><span>Positional,Data, and Alignment Accuracy' + $(product).data('positional') + '</span></li>' +
-						'</span></li><li><span><u>Registration Accuracy (Side by Side Alignment Accuracy):</u>' + $(product).data('registration') + '</span></li>' +
+						'</span></li><li><span>Positional,Data, and Alignment Accuracy:<br/>' + $(product).data('positional') + '</span></li>' +
+						'</span></li><li><span>Registration Accuracy (Side by Side Alignment Accuracy):<br/>' + $(product).data('registration') + '</span></li>' +
 						'</span></li><li><span>Line/Space Width:<br/>' + $(product).data('line') + '</span></li>' +
 						'</span></li><li><span>Line/Space SEM Image:<br/>' + $(product).data('line2') + '</span></li>' +
 						'</span></li><li><span>DF Thickness:<br/>' + $(product).data('df') + '</span></li>' +
