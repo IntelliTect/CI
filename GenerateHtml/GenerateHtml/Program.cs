@@ -59,9 +59,14 @@ namespace GenerateHtml
 
         static void Main(string[] args)
         {
+            string excelFile = @"..\..\..\..\DI Comparison Chart.xlsx";
+            if (args.Length > 0)
+            {
+                excelFile = args[0];
+            }
+            Console.WriteLine("using excel file: " + excelFile);
 
-
-           string header = @"<html xmlns = ""http://www.w3.org/1999/xhtml"">
+            string header = @"<html xmlns = ""http://www.w3.org/1999/xhtml"">
 <head>
     <meta http-equiv = ""Content-Type"" content=""text / html; charset = UTF-8"" />
                    <title> Product Comparison</title>
@@ -79,7 +84,7 @@ namespace GenerateHtml
             XSSFWorkbook hssfwb;
             using (
                 FileStream file =
-                    new FileStream(@"..\..\..\..\DI Comparison Chart.xlsx",
+                    new FileStream(excelFile,
                         FileMode.Open, FileAccess.Read))
             {
 

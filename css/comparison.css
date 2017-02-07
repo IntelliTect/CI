@@ -220,6 +220,10 @@ li p {
 		height: 150px
 	}
 
+	.productHeader {
+		text-decoration: underline;
+	}
+
 	.modal-inner .product ul,
 	.modal-inner .product li {
 		color: #fff;
