@@ -26,40 +26,42 @@
 
 					product = $('.product[data-id="'+itemsarray[i]+'"]');
 
-					$('.modal-products').append('<div class="product"><img src="'+$(product).find('img').attr('src')+
-					'"/><ul><li><span>'+$(product).data('title')+
-					'</span></li><li><span>Technology: '+$(product).data('technology')+'</span></li>'+
-'</span></li><li class=shortli><span>Depth of Focus: '+$(product).data('depth')+'</span></li>'+
+					$('.modal-products').append('<div class="product"><img height="230p" width="250px" src="'+$(product).find('img').attr('src')+
+					'"/><ul><li><span>'+$(product).data('title')+'<br/>'+$(product).data('url') + 
+					'</span></li>' + 
+					'<li><span>Model<br>'+$(product).data('model')+'</span></li>'+
+					'<li><span>Technology: '+$(product).data('technology')+'</span></li>'+
+'</span></li><li><span>Depth of Focus: '+$(product).data('depth')+'</span></li>'+
 '</span></li><li><span>Power: '+$(product).data('power')+'</span></li>'+
-'</span></li><li><span>Film Resist Sides/hour: '+$(product).data('film ')+'</span></li>'+
+'</span></li><li><span>Film Resist Sides/hour: '+$(product).data('film')+'</span></li>'+
 '</span></li><li><span>Soldermask Sides/hour: '+$(product).data('soldermask')+'</span></li>'+
 '</span></li><li><span>Speed Details: '+$(product).data('speed')+'</span></li>'+
 '</span></li><li><span>Edge Roughness: '+$(product).data('edge')+'</span></li>'+
-'</span></li><li><span>Positional Accuracy / Data Resolution / Alignment Accuracy: '+$(product).data('positional ')+'</span></li>'+
-'</span></li><li><span>Registration Accuracy (Side by Side Alignment Accuracy): '+$(product).data('registration')+'</span></li>'+
+'</span></li><li><span>Positional,Data, and Alignment Accuracy'+$(product).data('positional')+'</span></li>'+
+'</span></li><li><span><u>Registration Accuracy (Side by Side Alignment Accuracy):</u>'+$(product).data('registration')+'</span></li>'+
 '</span></li><li><span>Line/Space Width: '+$(product).data('line')+'</span></li>'+
 '</span></li><li><span>Line/Space SEM Image: '+$(product).data('line2')+'</span></li>'+
-'</span></li><li><span>DF Thickness: '+$(product).data('df ')+'</span></li>'+
-'</span></li><li><span>Hole Diameter: '+$(product).data('hole ')+'</span></li>'+
+'</span></li><li><span>DF Thickness: '+$(product).data('df')+'</span></li>'+
+'</span></li><li><span>Hole Diameter: '+$(product).data('hole')+'</span></li>'+
 '</span></li><li><span>Hole Diameter Image: '+$(product).data('hole2')+'</span></li>'+
-'</span></li><li><span>SRO (solder resist opening): '+$(product).data('sro ')+'</span></li>'+
+'</span></li><li><span>Ssolder Resist Opening: '+$(product).data('sro')+'</span></li>'+
 '</span></li><li><span>SR Thickness: '+$(product).data('sr')+'</span></li>'+
 '</span></li><li><span>Address Pitch: '+$(product).data('address')+'</span></li>'+
 '</span></li><li><span>Min. Image Size: '+$(product).data('min')+'</span></li>'+
 '</span></li><li><span>Max. Image Size: '+$(product).data('max')+'</span></li>'+
-'</span></li><li><span>Panel Thickness: '+$(product).data('panel ')+'</span></li>'+
+'</span></li><li><span>Panel Thickness: '+$(product).data('panel')+'</span></li>'+
 '</span></li><li><span>Handling Options: '+$(product).data('handling')+'</span></li>'+
-'</span></li><li><span>Machine Dimensions: '+$(product).data('machine ')+'</span></li>'+
-'</span></li><li><span>Models: '+$(product).data('models')+'</span></li>'+
-'</span></li><li><span>Double Machine Images: '+$(product).data('double ')+'</span></li>'+
-'</span></li><li><span>Expected Laser DMD Head Lifetime: '+$(product).data('expected ')+'</span></li>'+
+'</span></li><li><span>Machine Dimensions: '+$(product).data('machine')+'</span></li>'+
+//'</span></li><li><span>Models: '+$(product).data('models')+'</span></li>'+
+'</span></li><li><span>Double Machine Images: '+$(product).data('double')+'</span></li>'+
+'</span></li><li><span>Expected Laser DMD Head Lifetime: '+$(product).data('expected')+'</span></li>'+
 '</span></li><li><span>Warranty Standard: '+$(product).data('warranty')+'</span></li>'+
 '</span></li><li><span>Warranty Cost/year: '+$(product).data('warranty2')+'</span></li>'+
 '</span></li><li><span>Mechanical Clamping: '+$(product).data('mechanical')+'</span></li>'+
 '</span></li><li><span>Autofocus if needed: '+$(product).data('autofocus')+'</span></li>'+
-'</span></li><li><span>Panel Traceability(Serial Number Tracking): '+$(product).data('panel2')+'</span></li>'+
+'</span></li><li><span>Panel Traceability (Serial Number Tracking): '+$(product).data('panel2')+'</span></li>'+
 '</span></li><li><span>Non-linear Distortion: '+$(product).data('non-linear')+'</span></li>'+
-'</span></li><li><span>URL: '+$(product).data('url')+'</span></li>'+
+//'</span></li><li><span>URL: '+$(product).data('url')+'</span></li>'+
 '</span></li><li><span>Video Examples: '+$(product).data('video')+'</span></li>'+
 '</span></li><li><span>Notes: '+$(product).data('notes')+'</span></li></div>'+
 

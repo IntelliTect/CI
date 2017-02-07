@@ -36,7 +36,7 @@ data-max="610mm X 813mm"
 data-panel="" 
 data-handling="" 
 data-machine="" 
-data-models="" 
+data-models="falcon.png" 
 data-double="" 
 data-expected="10 years" 
 data-warranty="" 
@@ -50,7 +50,7 @@ data-notes=""
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/falcon.png" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">Falcon</h3>
 <p class="description">Circuit Imaging</p>
 </div>
@@ -81,7 +81,7 @@ data-max=""
 data-panel="" 
 data-handling="" 
 data-machine="" 
-data-models="" 
+data-models="nuvogo.png" 
 data-double="" 
 data-expected="2-3 years" 
 data-warranty="" 
@@ -95,7 +95,7 @@ data-notes="1000 is designed for solder mask"
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/nuvogo.png" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">Nuvogo 800/1000</h3>
 <p class="description">Orbotech</p>
 </div>
@@ -126,7 +126,7 @@ data-max="660 mm width x 650 mm length (extendable)"
 data-panel="0.05 mm to 8 mm" 
 data-handling="" 
 data-machine="" 
-data-models="" 
+data-models="speedlight.png" 
 data-double="" 
 data-expected="" 
 data-warranty="" 
@@ -140,7 +140,7 @@ data-notes="Their integrated solution includes Loading,ÿPre-cleaning,ÿFirst buff
 data-video="<a href='https://www.youtube.com/watch?v=AC9kSARQOWo'>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/speedlight.png" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">SpeedLight 2D</h3>
 <p class="description">Manz (formerly KLEO)</p>
 </div>
@@ -185,7 +185,7 @@ data-notes=""
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">Ledia 6F</h3>
 <p class="description">Screen</p>
 </div>
@@ -230,7 +230,7 @@ data-notes=""
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">INPREX</h3>
 <p class="description">Adtec</p>
 </div>
@@ -275,7 +275,7 @@ data-notes="Schmoll Maschinen, the well-known suppli-er of mechanical and laser 
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">Schmoll</h3>
 <p class="description"></p>
 </div>
@@ -320,7 +320,7 @@ data-notes=""
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">First EIE SA</h3>
 <p class="description"></p>
 </div>
@@ -365,7 +365,7 @@ data-notes=""
 data-video="<a href=''>Click Here</a>"
 >
 <button><div>+</div></button>
-<img src = "products/1.png" class="product-image" />
+<img src = "products/" onerror="this.src='products/none.png'" class="product-image" />
 <h3 class="text-center">Aladdin</h3>
 <p class="description">Ajuhitek</p>
 </div>

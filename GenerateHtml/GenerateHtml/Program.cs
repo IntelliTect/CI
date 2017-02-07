@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace GenerateHtml
 {
     class Program
     {
+        private static int MaxUrlCount = 6;
 
         static string GetImage(string cell)
         {
@@ -26,8 +28,38 @@ namespace GenerateHtml
             }
         }
 
+        static string ParseExcelRow(string cell)
+        {
+            return cell.Replace("\n", "<br/>");
+        }
+
+
+        static string GetUrlData(ISheet sheet, int rowNum, int col)
+        {
+            StringBuilder sb = new StringBuilder("");
+            for (int i = 0; i < MaxUrlCount; i++)
+            {
+
+                try
+                {
+                    ICell cell = sheet.GetRow(rowNum++).Cells[col];
+                    if ((cell == null) || (cell.Hyperlink == null) || (string.IsNullOrWhiteSpace(cell.ToString())))
+                    {
+                        return sb.ToString();
+                    }
+                    sb.AppendLine($@"<a href='{cell.Hyperlink}'> {cell.ToString()}</a><br/>");
+                }
+                catch (System.ArgumentOutOfRangeException)
+                {
+                    return sb.ToString();
+                }
+            }
+            return sb.ToString();
+        }
+
         static void Main(string[] args)
         {
+
 
            string header = @"<html xmlns = ""http://www.w3.org/1999/xhtml"">
 <head>
@@ -41,8 +73,8 @@ namespace GenerateHtml
 <body>
     <a id=""compare"" href=""#animatedModal"" disabled class=""compare-products"">Compare Products</a>
 	<div class=""container"">";
+            StringBuilder fileContents = new StringBuilder(header);
 
-            Console.WriteLine(header);
 
             XSSFWorkbook hssfwb;
             using (
@@ -59,59 +91,61 @@ namespace GenerateHtml
                 int lastColNum = firstRow.Cells.Count(cell => !string.IsNullOrWhiteSpace(cell.ToString()));
                 int i = 1;
 
+
                 for (int col = 1; col < lastColNum; col++) //start at 1 to skip over labels
                 {
                     int rowNum = 0;
                     StringBuilder sb = new StringBuilder($@"<div class=""product"" data-id=""{i++}"" ");
                     // IRow row = sheet.GetRow(rowNum++);
-                    sb.AppendLine($@"data-title=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-model=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-vendor=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-technology=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-wavelength=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-depth=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-power=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-film=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-soldermask=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-speed=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-edge=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-positional=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-registration=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-line=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    string line2Img = sheet.GetRow(rowNum++).Cells[col].ToString();
+                    sb.AppendLine($@"data-title=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-model=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-vendor=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-technology=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-wavelength=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-depth=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-power=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-film=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-soldermask=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-speed=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-edge=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-positional=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-registration=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-line=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    string line2Img = ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString());
                     sb.AppendLine($@"data-line2={GetImage(line2Img)}");
-                    sb.AppendLine($@"data-df=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-hole=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-hole2=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-sro=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-sr=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-address=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-min=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-max=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-panel=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-handling=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" "); 
-                    sb.AppendLine($@"data-machine=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-models=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-double=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-expected=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-warranty=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-warranty2=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-mechanical=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-autofocus=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-panel2=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-non-linear=""{sheet.GetRow(rowNum++).Cells[col].ToString()}"" ");
-                    sb.AppendLine($@"data-url=""<a href='{sheet.GetRow(rowNum++).Cells[col].ToString()}'>Click Here</a>""");
-                    sb.AppendLine($@"data-notes=""{sheet.GetRow(rowNum++).Cells[col].ToString()}""");
-                    sb.AppendLine($@"data-video=""<a href='{sheet.GetRow(rowNum++).Cells[col].ToString()}'>Click Here</a>""");
+                    sb.AppendLine($@"data-df=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-hole=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-hole2=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-sro=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-sr=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-address=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-min=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-max=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-panel=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-handling=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" "); 
+                    sb.AppendLine($@"data-machine=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-models=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-double=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-expected=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-warranty=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-warranty2=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-mechanical=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-autofocus=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-panel2=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-non-linear=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}"" ");
+                    sb.AppendLine($@"data-url=""{GetUrlData(sheet, rowNum, col)}""");
+                    rowNum += MaxUrlCount;
+                        //                    sb.AppendLine($@"data-url=""<a href='{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}'>Click Here</a>""");
+                    sb.AppendLine($@"data-notes=""{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}""");
+                    sb.AppendLine($@"data-video=""<a href='{ParseExcelRow(sheet.GetRow(rowNum++).Cells[col].ToString())}'>Click Here</a>""");
                     sb.AppendLine(@">");
                     sb.AppendLine($@"<button><div>+</div></button>");
-                    sb.AppendLine($@"<img src = ""products/1.png"" class=""product-image"" />");
-                    sb.AppendLine($@"<h3 class=""text-center"">{sheet.GetRow(0).Cells[col]}</h3>"); //machine
-                    sb.AppendLine($@"<p class=""description"">{sheet.GetRow(2).Cells[col]}</p>"); //vendor
+                    sb.AppendLine($@"<img src = ""products/{sheet.GetRow(26).Cells[col]}"" onerror=""this.src='products/none.png'"" width=""250px"" height=""230px"" class=""product-image"" />");
+                    sb.AppendLine($@"<h3 class=""text-center"">{ParseExcelRow(sheet.GetRow(0).Cells[col].ToString())}</h3>"); //machine
+                    sb.AppendLine($@"<p class=""description"">{ParseExcelRow(sheet.GetRow(2).Cells[col].ToString())}</p>"); //vendor
  //                   sb.AppendLine($@"<p class=""description"">{sheet.GetRow(3).Cells[col]}</p>"); //technology
                     sb.AppendLine("</div>");
-
-                    Console.WriteLine(sb);
+                    fileContents.Append(sb);
                 }
             }
 
@@ -154,7 +188,8 @@ namespace GenerateHtml
 </script>
 <!-- Tutorial JS END -->
 </html>";
-            Console.WriteLine(footer);
+            fileContents.Append(footer);
+            File.WriteAllText(@"..\..\..\..\index.html", fileContents.ToString());
         }
     }
 }

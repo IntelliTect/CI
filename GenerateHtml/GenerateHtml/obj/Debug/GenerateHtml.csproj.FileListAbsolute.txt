@@ -22,3 +22,15 @@ C:\Users\Chris\Source\Github\product\GenerateHtml\GenerateHtml\bin\Debug\NPOI.Op
 C:\Users\Chris\Source\Github\product\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXmlFormats.dll
 C:\Users\Chris\Source\Github\product\GenerateHtml\GenerateHtml\bin\Debug\NPOI.xml
 C:\Users\Chris\Source\Github\product\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.exe.config
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.exe
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.pdb
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.exe
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.pdb
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.dll
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OOXML.dll
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.xml
+C:\Users\Chris\Source\Github\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.csprojResolveAssemblyReference.cache
