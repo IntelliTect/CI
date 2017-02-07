@@ -24,7 +24,7 @@ namespace GenerateHtml
             }
             else
             {
-                return $@"'<img src=""products/{cell}"" width=""100"" height=""50""/>'";
+                return $@"'<img src=""products/{cell}"" width=""200"" height=""100""/>'";
             }
         }
 
@@ -186,7 +186,6 @@ namespace GenerateHtml
 
     });
 </script>
-<!-- Tutorial JS END -->
 </html>";
             fileContents.Append(footer);
             File.WriteAllText(@"..\..\..\..\index.html", fileContents.ToString());
