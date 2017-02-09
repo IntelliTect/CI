@@ -46,3 +46,15 @@ D:\Source\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXml4Net.dll
 D:\Source\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\Source\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.xml
 D:\Source\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.csprojResolveAssemblyReference.cache
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.exe.config
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.exe
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\GenerateHtml.pdb
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.dll
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OOXML.dll
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\bin\Debug\NPOI.xml
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.csprojResolveAssemblyReference.cache
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.exe
+C:\Users\aas4498\Source\Repos\CI\GenerateHtml\GenerateHtml\obj\Debug\GenerateHtml.pdb
