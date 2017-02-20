@@ -14,14 +14,17 @@
         <h1 class="text-center">
             Direct Imaging Solutions
             <br />
-            <small >product comparison tool</small>
+            <small >Product Comparison Tool</small>
+            <br/>
+            <br/>
+            <span style="font-size:50%"><i>Please send suggested changes to any of the data on this site to <a href="mailto:info@pcbequipmentcompare.com" target="_top">info@pcbequipmentcompare.com</a></small></i></span>
         </h1>
 
         <!-- ko if: view() == 1 -->
 
             <div class="text-center" style="margin: 10px">
                 <button class="btn btn-primary btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
-                    Compare 
+                    Compare
                     <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span>
                     Selected Products
                 </button>
@@ -39,7 +42,7 @@
             </div>
 
             <br />
-        
+
 
             <div class="text-center" style="margin: 10px">
                 <button class="btn btn-primary btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
@@ -49,10 +52,10 @@
                 </button>
             </div>
         <!-- /ko -->
-        
+
         <!-- ko if: view() == 2 -->
             <button class="btn btn-primary pull-right" data-bind="click: function(){view(1)}">Back</button>
-        
+
             <!-- ko foreach: products -->
                 <div class="product-small" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
 
@@ -63,11 +66,11 @@
                     <span class="text-center" data-bind="text: data[0]"></span>
                 </div>
             <!-- /ko -->
-        
+
 			<h1 class="text-center no-products" data-bind="visible: $root.numSelections() == 0" >select one or more products above to compare</h1>
 
 			<div class="modal-products" data-bind="visible: $root.numSelections() > 0">
-						
+
 				<table class="table  highlight-rows" style="table-layout: fixed">
                     <tbody>
                         <!-- ko foreach: headers -->
@@ -100,9 +103,9 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/knockout.js"></script>
 <script type="text/javascript" src="data.js"></script>
-   
+
 <script>
-    
+
     model.view = ko.observable(1);
 
     model.numSelections = ko.computed(function () {
