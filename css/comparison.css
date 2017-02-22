@@ -243,6 +243,7 @@ table.highlight-cols {
 	}
 	
 	.product {
+		border: 2px solid #8ec549!important;
 		font-weight: 100; 
        		cursor: pointer;
 		width: 270px;
