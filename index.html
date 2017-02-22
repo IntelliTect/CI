@@ -1,57 +1,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text / html; charset = UTF-8" />
-	<title> Product Comparison 2</title>
+	<title> Product Comparison</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' >
 	<link rel="stylesheet" href="css/normalize.min.css" >
 	<link rel="stylesheet" href="css/animate.min.css" >
 	<link rel="stylesheet" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" href="css/comparison.css" >
-	<style>
-		/* checked mark aspect */
-		
-		.product > .prod-text-area > .check-box:after,
-		.product.selected > .prod-text-area > .check-box:after
-		{
-			display: inline-block; 
-			border-radius: 5px; 
-			float: left; 
-			height: 35px; 
-			width: 35px;
-			position: absolute;
-			bottom: .55em;
-			left: .56em;
-			font-size: 2.4em;
-			line-height: 0.8;
-			
-		}
-		
-		 .product  > .prod-text-area > .check-box:after
-		 {
-		content: ' '; 
-		border: 1px solid #86c709; 
-		}
-		
-		.product.selected > .prod-text-area > .check-box:after
-		{
-		content: '✕';
-		color: #d1ff9a;
-		border: 1px solid #d1ff9a; 
-			transition: all .33s;
-		
-		}
-	</style>
-
 </head>
 <body>
-<div class="container" style="background: url('css/pcb_banner.jpg')    top center  no-repeat #fff; background-size: 1200px 160px; ">
+<div class="container" style="background: url('css/pcb_banner.jpg')  top center  no-repeat #fff; background-size: 1200px 160px; ">
     <div>
         <img src="css/pcb_header.png" style="float: left; width: 60%; padding-top: 15px;">
     </div>
 
   <div class="text-section">
-        <small>Select products below to compare. <br> Please send suggested content changes on this site to <a
-                href="mailto:info@pcbequipmentcompare.com" target="_top">info@pcbequipmentcompare.com</a></small>
+        <span class="main-text">Select products below to compare. <br> Please send suggested content changes on this site to <a
+                href="mailto:info@pcbequipmentcompare.com" target="_top">info@pcbequipmentcompare.com</a></span>
   </div>
   
 	<div style="margin-bottom: 50px;">
@@ -63,7 +28,8 @@
                 <button class="btn btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
                     Compare
                 </button>
-		   <br>  <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span> Selected Product(s)
+		   <br>  <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span> 
+		    <span class="main-text"> Selected Product(s)</span> 
             </div>
 
             <div class="clearfix">
