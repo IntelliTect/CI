@@ -272,15 +272,16 @@ table.highlight-cols {
     .product-small .product-image {
         margin-right: 5px;
     }
-	
+
+
 	.product h3 {
 		font-size: 22px;
-		margin-bottom: 50px;
+		margin-bottom: 0px;
 	}
 	
 	.product h3 span {
 		border-bottom: 2px solid #ccc;
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 	}
 	/* Media queries for responsive */
 	
