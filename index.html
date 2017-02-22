@@ -38,7 +38,7 @@
                     <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
                         <!-- TODO: HARDCODED -->
                         <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="230" class="product-image" />
-                        <span style="float: right: padding-right: 15px;"> 
+                        <span class="prod-text-area"> 
 			   <h3 class="text-center" data-bind="text: data[0]"></h3>
                            <p class="description" data-bind="text: data[4]"></p>
 			 </span>
