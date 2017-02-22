@@ -32,12 +32,32 @@
 
             <div class="clearfix">
                 <!-- ko foreach: products -->
-                    <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-                        <!-- TODO: HARDCODED -->
-                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image" />
-                        <h3 class="text-center" data-bind="text: data[0]"></h3>
-                        <p class="description" data-bind="text: data[4]"></p>
+		    
+                    <div class="product selectDisable" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                       
+			    
+                        <span class="prod-text" data-bind="text: data[0]"></span>
+                         <span class="prod-text-small" data-bind="text: data[4]"></span>
+			    
+			     <img class="img-case" data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'"
+			     width="250" height="230" class="product-image" />
                     </div>
+		    
+		    
+		    
+            <div>
+                <input type="checkbox" id="nuvogo-e" class="custom-check" name="nuvogo-e">
+                <label for="nuvogo-e">
+                 
+                    <div >
+                        <img src="./prod.png">
+                    </div>
+                </label>
+            </div>
+		    
+		    
+		    
+		    
                 <!-- /ko -->
             </div>
 
