@@ -308,21 +308,18 @@
     </nav>
 
 	
-        <div class="clearfix">
-            <!-- ko foreach: products -->
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-f" class="custom-check" name="nuvogo-f" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-                <label for="nuvogo-f">
-                    <span class="prod-text" data-bind="text: data[0]"></span>
-                    <span class="prod-text-small" data-bind="text: data[4]"></span>
-                    <div class="img-case">
-                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image">
+	 <div class="clearfix">
+                <!-- ko foreach: products -->
+                    <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                        <!-- TODO: HARDCODED -->
+                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image" />
+                        <h3 class="text-center" data-bind="text: data[0]"></h3>
+                        <p class="description" data-bind="text: data[4]"></p>
                     </div>
-                </label>
+                <!-- /ko -->
             </div>
-            <!-- /ko -->
-        </div>
-
+	
+	
         <br>
 
 <hr/>
