@@ -237,8 +237,8 @@ table.highlight-cols {
 	}
 	
 	.product {
-		font-family: Lato;
-        cursor: pointer;
+		font-weight: 100; 
+       		cursor: pointer;
 		width: 270px;
 		height: 270px;
 		float: left;
@@ -257,7 +257,7 @@ table.highlight-cols {
 
 	.product-small {
         cursor: pointer;
-		font-family: Lato;
+		 font-weight: 100; 
 		border: 3px solid #bbb;
         display: inline-block;
 		margin: 5px;
