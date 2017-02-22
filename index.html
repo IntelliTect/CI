@@ -309,98 +309,16 @@
 
         <div class="clearfix">
             <!-- ko foreach: products -->
-
             <div class="product selectDisable">
-                <input type="checkbox" id="speedlight" class="custom-check" name="speedlight">
-                <label for="speedlight">
-                    <span class="prod-text">SpeedLight 2D </span>
-                    <span class="prod-text-small">Manz (formerly KLEO)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo" class="custom-check" name="nuvogo">
-                <label for="nuvogo">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-b" class="custom-check" name="nuvogo-b">
-                <label for="nuvogo-b">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-
-
-
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-c" class="custom-check" name="nuvogo-c">
-                <label for="nuvogo-c">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-
-
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-d" class="custom-check" name="nuvogo-d">
-                <label for="nuvogo-d">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-
-
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-e" class="custom-check" name="nuvogo-e">
-                <label for="nuvogo-e">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
-                    <div class="img-case">
-                        <img src="./prod.png">
-                    </div>
-                </label>
-            </div>
-
-
-
-
-            <div class="product selectDisable">
-                <input type="checkbox" id="nuvogo-f" class="custom-check" name="nuvogo-f">
+                <input type="checkbox" id="nuvogo-f" class="custom-check" name="nuvogo-f" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
                 <label for="nuvogo-f">
-                    <span class="prod-text">Nuvogo</span>
-                    <span class="prod-text-small"> (Lorem ipsum)</span>
+                    <span class="prod-text" data-bind="text: data[0]"></span>
+                    <span class="prod-text-small" data-bind="text: data[4]"></span>
                     <div class="img-case">
-                        <img src="./prod.png">
+                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'">
                     </div>
                 </label>
             </div>
-
             <!-- /ko -->
         </div>
 
@@ -409,16 +327,9 @@
 <hr/>
     <small class="center"> Direct Imaging Solutions Inc. All Rights Reserved </small>
 	
-	
-	
-	
-	
-	
-	
-	<div style="margin-bottom: 50px;">
-        
 
-   
+	<div style="margin-bottom: 50px;">
+       
 
             <div class="text-center" style="margin: 10px">
                 <button class="btn btn-primary btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
@@ -428,16 +339,7 @@
                 </button>
             </div>
 
-            <div class="clearfix">
-                <!-- ko foreach: products -->
-                    <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-                        <!-- TODO: HARDCODED -->
-                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image" />
-                        <h3 class="text-center" data-bind="text: data[0]"></h3>
-                        <p class="description" data-bind="text: data[4]"></p>
-                    </div>
-                <!-- /ko -->
-            </div>
+         
 
             <br />
 
