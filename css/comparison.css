@@ -59,7 +59,7 @@
 		background: none;
 	}
 
-	.product.selected, .product-small.selected, .btn {
+	.product.selected, .product-small.selected, button, .btn {
 		background: rgba(136, 217, 31, 1);
 		background: -moz-linear-gradient(-45deg, rgba(136, 217, 31, 1) 0%, rgba(146, 232, 66, 1) 3%, rgba(136, 217, 31, 1) 24%, rgba(44, 120, 0, 1) 100%);
 		background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(136, 217, 31, 1)), color-stop(3%, rgba(146, 232, 66, 1)), color-stop(24%, rgba(136, 217, 31, 1)), color-stop(100%, rgba(44, 120, 0, 1)));
@@ -429,28 +429,7 @@ table.highlight-cols {
 	}*/
 	
 
-	.product button {
-		border: 1px solid #ccc;
-		background: #fff;
-		font-size: 20px;
-		width: 30px;
-		height: 30px;
-		outline: none;
-		-moz-transition: all .5s ease;
-		-webkit-transition: all .5s ease;
-		-o-transition: all .5s ease;
-		transition: all .5s ease;
-		cursor: pointer;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-	}
 	
-	.product button:hover {
-		border: 1px solid #0ad68e;
-		background: #0ad68e;
-		color: #fff;
-	}
 	/* selected product button state */
 	
 	.product.selected, .product-small.selected {
@@ -460,11 +439,7 @@ table.highlight-cols {
 		-moz-transition: border-color .15s ease-in-out;
 	}
 	
-	.product.selected button {
-		background: #1dc0f5;
-		border: 1px solid #1dc0f5;
-		color: #fff;
-	}
+	 
 	/* rotate the + to be an x */
 	
 	.product.selected button div {
@@ -481,9 +456,7 @@ table.highlight-cols {
 		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 	}
 	
-	.product button.selected:hover {
-		background: #1dc0f5;
-	}
+	 
 	
 	.product .text-center {
 		text-align: center;
