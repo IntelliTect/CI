@@ -10,15 +10,26 @@
 	<style>
 		/* checked mark aspect */
 		
-		.product.selected > .prod-text-area > .check-box:after
-	{
-		content: '✕';
-		position: absolute;
+		.product.selected > .prod-text-area > .check-box
+		{
+			display: inline-block; 
+			border: 1px solid; 
+			border-radius: 5px; 
+			float: left; 
+			height: 35px; 
+			width: 35px;
+			position: absolute;
 		bottom: .55em;
 		left: .56em;
 		font-size: 1.6em;
 		line-height: 0.8;
 		color: #d1ff9a;
+		}
+		
+		.product.selected > .prod-text-area > .check-box:after
+	{
+		content: '✕';
+		
 		transition: all .33s;
 		}
 	</style>
@@ -53,8 +64,7 @@
                         <!-- TODO: HARDCODED -->
                         <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="230" class="product-image" />
                         <span class="prod-text-area"> 
-				<span class="check-box" 
-				      style="display: block; border: 2px solid; border-radius: 5px; float: left; height: 35px; width: 35px;">
+				<span class="check-box"> 
 				</span>
 			   <h3 class="text-center" data-bind="text: data[0]"></h3>
                            <p class="description" data-bind="text: data[4]"></p>
