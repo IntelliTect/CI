@@ -14,18 +14,6 @@
 		-webkit-border-bottom-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 	}
-	label {
-		border-radius: 12px;
-		width: 100%;
-		min-height: 270px;
-		height: 200px;
-		margin: 12px;
-		padding: 15px;
-		display: inline-block;
-		position: relative;
-		border: 2px solid #ecfdd6;
-		border-radius: 10px;
-	}
 
 	.selectDisable {
 		-webkit-user-select: none;
@@ -34,7 +22,7 @@
 		-o-user-select: none;
 		user-select: none;
 	}
-
+ 
 	button, .btn {
 		font-weight: 100;
 		color: #fff;
@@ -53,14 +41,6 @@
 		border-radius: 4px;
 	}
 
-
-
-	input[type=checkbox] + label {
-		background: none;
-	}
-
-
- 
 	.product.selected, .product-small.selected, button, .btn, .btn-group-lg > .btn, .btn-lg {
 		background: rgba(136, 217, 31, 1);
 		background: -moz-linear-gradient(-45deg, rgba(136, 217, 31, 1) 0%, rgba(146, 232, 66, 1) 3%, rgba(136, 217, 31, 1) 24%, rgba(44, 120, 0, 1) 100%);
@@ -70,9 +50,9 @@
 		background: -ms-linear-gradient(-45deg, rgba(136, 217, 31, 1) 0%, rgba(146, 232, 66, 1) 3%, rgba(136, 217, 31, 1) 24%, rgba(44, 120, 0, 1) 100%);
 		background: linear-gradient(135deg, rgba(136, 217, 31, 1) 0%, rgba(146, 232, 66, 1) 3%, rgba(136, 217, 31, 1) 24%, rgba(44, 120, 0, 1) 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88d91f', endColorstr='#2c7800', GradientType=1);
-
+ 
 	}
-	input[type=checkbox]:checked + label
+	.product.selected, .product-small.selected, button, .btn, .btn-group-lg > .btn, .btn-lg
 	{  transition: all 1.1s;
 		font-weight: 100;
 		color: #fff;
