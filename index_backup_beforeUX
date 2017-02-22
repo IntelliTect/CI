@@ -1,0 +1,118 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text / html; charset = UTF-8" />
+	<title> Product Comparison 2</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' >
+	<link rel="stylesheet" href="css/normalize.min.css" >
+	<link rel="stylesheet" href="css/animate.min.css" >
+	<link rel="stylesheet" href="css/comparison.css" >
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+</head>
+<body>
+
+	<div style="margin-bottom: 50px;">
+        <h1 class="text-center">
+            Direct Imaging Solutions
+            <br />
+            <small >Product Comparison Tool</small>
+            <br/>
+            <br/>
+            <span style="font-size:50%"><i>Please send suggested changes to any of the data on this site to <a href="mailto:info@pcbequipmentcompare.com" target="_top">info@pcbequipmentcompare.com</a></small></i></span>
+        </h1>
+
+        <!-- ko if: view() == 1 -->
+
+            <div class="text-center" style="margin: 10px">
+                <button class="btn btn-primary btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
+                    Compare
+                    <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span>
+                    Selected Products
+                </button>
+            </div>
+
+            <div class="clearfix">
+                <!-- ko foreach: products -->
+                    <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                        <!-- TODO: HARDCODED -->
+                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image" />
+                        <h3 class="text-center" data-bind="text: data[0]"></h3>
+                        <p class="description" data-bind="text: data[4]"></p>
+                    </div>
+                <!-- /ko -->
+            </div>
+
+            <br />
+
+
+            <div class="text-center" style="margin: 10px">
+                <button class="btn btn-primary btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
+                    Compare
+                    <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span>
+                    Selected Products
+                </button>
+            </div>
+        <!-- /ko -->
+
+        <!-- ko if: view() == 2 -->
+            <button class="btn btn-primary pull-right" data-bind="click: function(){view(1)}">Back</button>
+
+            <!-- ko foreach: products -->
+                <div class="product-small" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+
+                    <!-- This is a dummy spacer so everything has the same height, even when there isn't an image. -->
+                    <div style="height: 30px; display: inline-block; vertical-align: middle"></div>
+
+                    <img data-bind="attr: {src: 'products/' + data[1]}, visible: data[1]" height="30" class="product-image" />
+                    <span class="text-center" data-bind="text: data[0]"></span>
+                </div>
+            <!-- /ko -->
+
+			<h1 class="text-center no-products" data-bind="visible: $root.numSelections() == 0" >select one or more products above to compare</h1>
+
+			<div class="modal-products" data-bind="visible: $root.numSelections() > 0">
+
+				<table class="table  highlight-rows" style="table-layout: fixed">
+                    <tbody>
+                        <!-- ko foreach: headers -->
+                            <tr>
+                                <td data-bind="text: $data"></td>
+                                <!-- ko with: $index() + 1 -->
+                                    <!-- ko foreach: $root.products -->
+                                        <!-- ko if: checked -->
+                                            <td>
+
+                                                <!-- ko if: data[$parent - 1].indexOf('.png') > -1 -->
+                                                    <img data-bind="attr: {src: 'products/' + data[$parent - 1]}" style="max-width: 250px" align="center" width="100%"/>
+                                                <!-- /ko -->
+                                                <!-- ko ifnot: data[$parent - 1].indexOf('.png') > -1 -->
+                                                    <span data-bind="html: data[$parent - 1]"></span>
+                                                <!-- /ko -->
+                                            </td>
+                                        <!-- /ko -->
+                                    <!-- /ko -->
+                                <!-- /ko -->
+                            </tr>
+                        <!-- /ko -->
+                    </tbody>
+				</table>
+			</div>
+
+            <button class="btn btn-primary pull-right" data-bind="click: function(){view(1)}">Back</button>
+        <!-- /ko -->
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/knockout.js"></script>
+<script type="text/javascript" src="data.js"></script>
+
+<script>
+
+    model.view = ko.observable(1);
+
+    model.numSelections = ko.computed(function () {
+        return model.products.filter(function (a) { return a.checked() }).length;
+    })
+
+	ko.applyBindings(model);
+</script>
+
+</html>
