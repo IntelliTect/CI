@@ -250,7 +250,7 @@ table.highlight-cols {
 	.product-small {
         cursor: pointer;
 		 font-weight: 100; 
-		border: 3px solid #bbb;
+		border: 2px solid #d3eab6!important;
         display: inline-block;
 		margin: 5px;
 		padding: 7px 7px 7px 7px;
