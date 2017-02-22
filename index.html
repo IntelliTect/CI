@@ -12,7 +12,7 @@
 
 	<div style="margin-bottom: 50px;">
         <h1 class="text-center">
-            Direct Imaging Solutions  3
+            Direct Imaging Solutions
             <br />
             <small >Product Comparison Tool</small>
             <br/>
@@ -31,26 +31,16 @@
             </div>
 
             <div class="clearfix">
-          
-            
-
-		            <!-- ko foreach: products -->
-                <div class="product-small" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-
-                    <!-- This is a dummy spacer so everything has the same height, even when there isn't an image. -->
-                    <div style="height: 30px; display: inline-block; vertical-align: middle"></div>
-
-                    <img data-bind="attr: {src: 'products/' + data[1]}, visible: data[1]" height="30" class="product-image" />
-                    <span class="text-center" data-bind="text: data[0]"></span>
-                </div>
-            <!-- /ko -->
- 
+                <!-- ko foreach: products -->
+                    <div class="product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                        <!-- TODO: HARDCODED -->
+                        <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="250" height="230" class="product-image" />
+                        <h3 class="text-center" data-bind="text: data[0]"></h3>
+                        <p class="description" data-bind="text: data[4]"></p>
+                    </div>
+                <!-- /ko -->
             </div>
-		    
-		    
-		    
-		    
-               
+
             <br />
 
 
