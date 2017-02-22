@@ -1,16 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text / html; charset = UTF-8" />
-<title> Product Comparison 2</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' >
-<link rel="stylesheet" href="css/normalize.min.css" >
-<link rel="stylesheet" href="css/animate.min.css" >
-<link rel="stylesheet" href="css/comparison.css" >
-<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<meta http-equiv="Content-Type" content="text / html; charset = UTF-8" />
+	<title> Product Comparison 2</title>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' >
+	<link rel="stylesheet" href="css/normalize.min.css" >
+	<link rel="stylesheet" href="css/animate.min.css" >
+	<link rel="stylesheet" href="css/comparison.css" >
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
 </head>
 <body>
 
-<div style="margin-bottom: 50px;">
+	<div style="margin-bottom: 50px;">
         <h1 class="text-center">
             Direct Imaging Solutions
             <br />
@@ -67,11 +67,11 @@
                 </div>
             <!-- /ko -->
 
-<h1 class="text-center no-products" data-bind="visible: $root.numSelections() == 0" >select one or more products above to compare</h1>
+			<h1 class="text-center no-products" data-bind="visible: $root.numSelections() == 0" >select one or more products above to compare</h1>
 
-<div class="modal-products" data-bind="visible: $root.numSelections() > 0">
+			<div class="modal-products" data-bind="visible: $root.numSelections() > 0">
 
-<table class="table  highlight-rows" style="table-layout: fixed">
+				<table class="table  highlight-rows" style="table-layout: fixed">
                     <tbody>
                         <!-- ko foreach: headers -->
                             <tr>
@@ -94,8 +94,8 @@
                             </tr>
                         <!-- /ko -->
                     </tbody>
-</table>
-</div>
+				</table>
+			</div>
 
             <button class="btn btn-primary pull-right" data-bind="click: function(){view(1)}">Back</button>
         <!-- /ko -->
@@ -112,7 +112,7 @@
         return model.products.filter(function (a) { return a.checked() }).length;
     })
 
-ko.applyBindings(model);
+	ko.applyBindings(model);
 </script>
 
 </html>
