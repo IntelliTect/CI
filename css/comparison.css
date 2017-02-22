@@ -1,12 +1,4 @@
 	body {
-		padding: 30px;
-	}
-
-
-
-
-
-	body {
 		margin: 0;
 		font-family: 'Open Sans', sans-serif;
 		background: #cad8d9;
@@ -276,7 +268,7 @@
 
 	.center { text-align: center; margin: 15px;}
 	.text-section { padding-left: 25px; margin: 10px; display: inline-block;}
-	</style>
+	
 	
 	/*li p {
     height: 500px;
