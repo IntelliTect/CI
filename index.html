@@ -8,22 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" href="css/comparison.css" >
 	
-	<style>
-		.num-circle {
-     border-radius: 135px;
-    width: 32px;
-    height: 32px;
-    padding: 5px;
-    background: rgba(32, 12, 12, 0.4);
-    border: none;
-    color: #F6F1F1;
-    text-align: center;
-    font: 15px;
-    margin: 33px;
-    display: inline-block;
- 
-}
-	</style>
+
 </head>
 <body>
 <div class="container" style="background: url('css/pcb_banner.jpg')    top center  no-repeat #fff; background-size: 1200px 160px; ">
@@ -45,7 +30,7 @@
                 <button class="btn btn-lg compare-products" data-bind="disable: $root.numSelections() == 0, click: function(){view(2)}">
                     Compare
                 </button>
-		   <br>  <span class="num-circle" data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span> Selected Product(s)
+		   <br>  <span data-bind="text: $root.numSelections() ? $root.numSelections() : ''"></span> Selected Product(s)
             </div>
 
             <div class="clearfix">
