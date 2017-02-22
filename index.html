@@ -10,7 +10,7 @@
 	<style>
 		/* checked mark aspect */
 		
-		.product > .prod-text-area > .check-box,
+		.product > .prod-text-area > .check-box:after,
 		.product.selected > .prod-text-area > .check-box:after
 		{
 			display: inline-block; 
@@ -23,7 +23,7 @@
 			left: .56em;
 			font-size: 2.4em;
 			line-height: 0.8;
-			transition: all .33s;
+			
 		}
 		
 		 .product  > .prod-text-area > .check-box:after
@@ -37,6 +37,7 @@
 		content: '✕';
 		color: #d1ff9a;
 		border: 1px solid #d1ff9a; 
+			transition: all .33s;
 		
 		}
 	</style>
