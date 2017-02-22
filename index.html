@@ -34,14 +34,19 @@
                 <!-- ko foreach: products -->
 		    
                     <div class="product selectDisable" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-                       
-			    
-                        <span class="prod-text" data-bind="text: data[0]"></span>
+                        <input type="checkbox" id="nuvogo-e" class="custom-check" name="text: data[0]">
+		      <label for="text: data[0]">
+                         <span class="prod-text" data-bind="text: data[0]"></span>
                          <span class="prod-text-small" data-bind="text: data[4]"></span>
-			    
-			     <img class="img-case" data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'"
+			    <div class="img-case">
+			     <img  data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'"
 			     width="250" height="230" class="product-image" />
-                    </div>
+			   </div>
+		      </label>
+		   </div>
+                  <!-- /ko -->
+            
+
 		    
 		    
 		    
@@ -58,9 +63,7 @@
 		    
 		    
 		    
-                <!-- /ko -->
-            </div>
-
+               
             <br />
 
 
