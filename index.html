@@ -68,7 +68,7 @@
         <!-- /ko -->
 
         <!-- ko if: view() == 2 -->
-            <button class="btn btn-primary pull-right" data-bind="click: function(){view(1)}">Back</button>
+            <button class="btn" data-bind="click: function(){view(1)}">Back</button>
 
             <!-- ko foreach: products -->
                 <div class="product-small" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
