@@ -5,11 +5,9 @@
 		padding: 0;
 	}
 
-
-
 	.main-text {
 		font-size: 14px;
-}
+		}
 	.container
 	{
 		background: #fff;
@@ -36,11 +34,13 @@
 		background: #86c709;
 	}
 	.btn:hover {
+		color: #fff; 
 		background: #276900;
 		transition: all .2s;
 	}
 
 	button, .btn:focus {
+		color: #fff; 
 		background: #86c709;
 		outline: none;
 		border-radius: 4px;
@@ -143,24 +143,6 @@
 		left: 44px;
 	}
 
-	.img-case {
-		z-index: 333;
-		display: block;
-		position: relative;
-		bottom: 40px;
-	}
-
-	.img-case img
-	{
-		width: 240px;
-	}
-
-
-	/* hover style just for information */
-	label:hover:before {
-		border: 1px solid green;
-	}
-
 
 	.navbar-fixed-top {
 		position: fixed;
@@ -169,14 +151,9 @@
 		/* z-index: 1030; */
 	}
 
-
-
-
 	small {
 		font-size: 13px;  position: relative; top: 20px; font-weight: 100;
 	}
-
-
 
 	@media only screen
 	and (min-device-width: 768px)
@@ -200,36 +177,7 @@
 
 	.center { text-align: center; margin: 15px;}
 	.text-section { padding-left: 25px; margin: 10px; display: inline-block;}
-	
-	
-	/*li p {
-    height: 500px;
-}*/
-	/*
-ul, li {
-    list-style: none;
-}
 
-ul {
-    display: table;
-}
-
-li {
-    display:table-cell;
-    border:1px solid grey;
-    padding:5px;
-    width:20%;
-}
-
-li img {
-    display: block;
-    margin:0 auto;
-
-}
-
-li p {
-    text-align: center;
-}*/
 
 table.highlight-rows tr:not(.no-row-highlight):hover {
   background-color: #f5f5f5; }
@@ -280,7 +228,7 @@ table.highlight-cols {
 	}
 	
 	.product {
-		border: 2px solid #8ec549!important;
+		border: 2px solid #d3eab6!important;
 		font-weight: 100; 
        		cursor: pointer;
 		width: 270px;
