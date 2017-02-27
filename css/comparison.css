@@ -251,7 +251,6 @@ table.highlight-cols {
 		border: 2px solid #d3eab6!important;
 		font-weight: 100; 
        		cursor: pointer;
-		max-width: 270px;
 		height: 270px;
 		float: left;
 		margin: 5px;
@@ -301,6 +300,7 @@ table.highlight-cols {
 	@media screen and (max-width: 720px) {
 		.product {
 			width: 95%;
+			max-width: 500px;
 			float: none;
 		}
 	}
