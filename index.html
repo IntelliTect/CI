@@ -48,7 +48,7 @@
 
             <div class="row clearfix">
                 <!-- ko foreach: products -->
-                    <div class="col-md-4 col-sm-4 col-lg-4 product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                    <div class="col-md-4 col-xs-12 col-sm-12 col-lg-4 product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
                         <!-- TODO: HARDCODED --> 
                         <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="230" class="product-image" />
                         <span class="prod-text-area"> 
