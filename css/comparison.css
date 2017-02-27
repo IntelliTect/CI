@@ -297,18 +297,7 @@ table.highlight-cols {
 	}
 	/* Media queries for responsive */
 	
-	@media screen and (max-width: 1220px) {
-		.product {
-			width: 30.5%;
-		}
-	}
-	
-	@media screen and (max-width: 960px) {
-		.product {
-			width: 46%;
-		}
-	}
-	
+	 
 	@media screen and (max-width: 720px) {
 		.product {
 			width: 95%;
