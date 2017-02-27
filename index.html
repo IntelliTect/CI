@@ -18,10 +18,9 @@
 <body>
 <div class="container" style="background: url('css/pcb_banner.jpg')  top center  no-repeat #fff; background-size: 1200px 160px; ">
    
-          <div class="row clearfix">
-                <!-- ko foreach: products -->
-             <div class="col-md-3 col-sm-4 col-lg-4">
-		<img src="css/logo.png" style="float: left; max-width: 150px;   padding-top: 15px;">
+          <div class="row">
+             <div class="col-md-2 col-sm-4 col-lg-4">
+		<img src="css/logo.png" style="float: left; max-width: 130px;   padding-top: 15px;">
 	     </div>
 	    <div class="col-md-8 col-sm-8 col-lg-8">
 	      <h1>Direct Imaging Soultions </h1>
@@ -51,7 +50,7 @@
             <div class="row clearfix">
                 <!-- ko foreach: products -->
                     <div class="col-md-8 col-sm-12 col-lg-4 product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
-                        <!-- TODO: HARDCODED -->
+                        <!-- TODO: HARDCODED --> 
                         <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="230" class="product-image" />
                         <span class="prod-text-area"> 
 				<span class="check-box"> 
