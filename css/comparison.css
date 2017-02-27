@@ -172,16 +172,16 @@ color: #22a42a;
 	small {
 		font-size: 13px;  position: relative; top: 20px; font-weight: 100;
 	}
-
+.spacing {
+		padding-left: 120px;
+		}
 	@media only screen
 	and (min-device-width: 768px)
 	and (max-device-width: 1824px)
 	and (orientation: landscape)
 	and (-webkit-min-device-pixel-ratio: 1)
 	{
- 	.spacing {
-		padding-left: 120px;
-		}
+ 	
 		.navbar-fixed-top {
 			position: relative;
 			/* right: 0; */
