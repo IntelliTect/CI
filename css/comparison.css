@@ -172,9 +172,25 @@ color: #22a42a;
 	small {
 		font-size: 13px;  position: relative; top: 20px; font-weight: 100;
 	}
-.spacing {
-		padding-left: 120px;
+	.spacing {
+		position: relative;
+		left: 115px;
 		}
+
+/* Media queries for responsive */
+	 
+	@media screen and (max-width: 720px) {
+		.product {
+			width: 95%;
+			max-width: 500px;
+			float: none;
+		}
+	.spacing {
+		position: relative;
+		left: 60px;
+		}
+		
+	}
 	@media only screen
 	and (min-device-width: 768px)
 	and (max-device-width: 1824px)
@@ -296,20 +312,7 @@ table.highlight-cols {
 		border-bottom: 2px solid #ccc;
 		padding-bottom: 5px;
 	}
-	/* Media queries for responsive */
 	
-	 
-	@media screen and (max-width: 720px) {
-		.product {
-			width: 95%;
-			max-width: 500px;
-			float: none;
-		}
-		.spacing {
-		padding-left: 60px;
-		}
-		
-	}
 	
 	.product img {
 		display: block;
