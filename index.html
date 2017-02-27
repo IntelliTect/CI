@@ -6,7 +6,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="css/favicon.ico">
+    <link rel="icon" href="../css/favicon.ico">
 	
 	<title> Product Comparison</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css' >
@@ -18,12 +18,17 @@
 <body>
 <div class="container" style="background: url('css/pcb_banner.jpg')  top center  no-repeat #fff; background-size: 1200px 160px; ">
    
-    <div>
-        <img src="css/pcb_header.png" style="float: left; width: 60%; padding-top: 15px;">
-	    <h1>Direct Imaging Soultions </h1>
-	    <h2>Product Comparison </h2>
-	    <img src="css/logo.png" style="float: left; width: 150px;  padding-top: 15px;">
-    </div>
+          <div class="row clearfix">
+                <!-- ko foreach: products -->
+             <div class="col-md-3 col-sm-4 col-lg-4">
+		<img src="css/logo.png" style="float: left; max-width: 150px;   padding-top: 15px;">
+	     </div>
+	    <div class="col-md-8 col-sm-8 col-lg-8">
+	      <h1>Direct Imaging Soultions </h1>
+	      <h2>Product Comparison </h2>
+	      
+   	    </div>
+	 </div>
 
   <div class="text-section">
         <span class="main-text">Select products below to compare. <br> Please send suggested content changes on this site to <a
@@ -45,7 +50,7 @@
 
             <div class="row clearfix">
                 <!-- ko foreach: products -->
-                    <div class="col-md-4 col-sm-12 col-lg-4 product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
+                    <div class="col-md-8 col-sm-12 col-lg-4 product" data-bind="click: function() {checked(!checked())}, css: checked() ? 'selected' : ''">
                         <!-- TODO: HARDCODED -->
                         <img data-bind="attr: {src: 'products/' + data[1]}" onerror="this.src='products/none.png'" width="230" class="product-image" />
                         <span class="prod-text-area"> 
