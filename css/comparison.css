@@ -179,7 +179,9 @@ color: #22a42a;
 	and (orientation: landscape)
 	and (-webkit-min-device-pixel-ratio: 1)
 	{
-
+ 	.spacing {
+		padding-left: 120px;
+		}
 		.navbar-fixed-top {
 			position: relative;
 			/* right: 0; */
@@ -303,6 +305,10 @@ table.highlight-cols {
 			max-width: 500px;
 			float: none;
 		}
+		.spacing {
+		padding-left: 60px;
+		}
+		
 	}
 	
 	.product img {
