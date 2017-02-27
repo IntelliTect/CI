@@ -39,7 +39,7 @@ h2  {color: #a4cd39;
 		user-select: none;
 	}
  
-a {
+a, a:link {
 	
 color: #22a42a;	
 }
