@@ -115,6 +115,7 @@ color: #22a42a;
 		.product.selected > .prod-text-area > .check-box:after
 		{
 		content: '✕';
+			font-size: 33px;
 		color: #d1ff9a;
 		border: 1px solid #d1ff9a; 
 			transition: all .33s;
