@@ -44,6 +44,19 @@ a, a:link {
 color: #22a42a;	
 }
 
+
+.btn.dark 
+{
+background: #3e5042;
+} 
+
+
+.btn.dark:hover 
+
+{
+background: #7f8780;
+} 
+
 	button, .btn {
 		font-weight: 100;
 		color: #fff;
